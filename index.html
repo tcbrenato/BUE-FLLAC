@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUE/FLLAC - Accueil</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Style pour fixer le header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff; /* Couleur blanche correcte */
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        header .navbar-brand img {
+            height: 60px; /* Taille du logo */
+        }
+
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: center; /* Centrer le menu */
+        }
+
+        .navbar-nav .nav-link {
+            color: #318F14;
+            font-size: 1.2rem; /* Taille du texte du menu */
+        }
+
+        .action-btn {
+            background-color: #070fff;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+
+        /* Style pour fixer le bouton WhatsApp en bas de page */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px;
+            font-size: 18px;
+            z-index: 1000;
+        }
+
+        /* Espace au-dessus du contenu pour ne pas chevaucher le header */
+        .content {
+            padding-top: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo">
+                </a>
+                <!-- Menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="equipes.html">Membres BUE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="actualites.html">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Bouton principal d'action "La FNEB" -->
+                    <a href="#" class="btn btn-warning action-btn">La FNEB</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" style="background-color: rgb(18, 100, 77); margin-top: 80px; padding: 60px 0;"> 
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-white">
+                    <h1>Bienvenue sur le site web officiel du Bureau d'Union d'Entité de la FLLAC</h1>
+                    <p>Nous sommes là pour soutenir les étudiants dans leur parcours académique et les accompagner dans leurs démarches.</p>
+                    <a href="#" class="btn btn-warning">Découvrez nos services</a>
+                </div> 
+
+                <div class="col-md-6">
+                  <br>  <img src="./Asset/study-group-african-people.jpg" alt="Image héro" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+        /* Couleur principale (comme dans la première section) */
+        .hero, .services, .team, .actualites, .partners, .contact {
+            background-color: rgb(18, 100, 77); /* Vert foncé */
+            color: white;
+        }
+    
+        /* Utilisation de variantes plus claires pour certaines sections */
+        .services, .partners {
+            background-color: rgb(22, 120, 90); /* Variation de vert légèrement plus clair */
+        }
+    
+        .team {
+            background-color: rgb(15, 85, 65); /* Variation de vert légèrement plus foncé */
+        }
+    
+        /* Style pour les titres */
+        h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+    
+        .card {
+            background-color: transparent; /* Transparent pour laisser passer le fond */
+            border: none; /* Pas de bordures */
+        }
+    
+        .card-title, .card-text {
+            color: white;
+        }
+    
+        /* Style des boutons */
+        .btn-primary {
+            background-color: #318F14; /* Vert plus vif pour les boutons */
+            border: none;
+        }
+    
+        .btn-primary:hover {
+            background-color: #28a745; /* Changement de couleur au survol */
+        }
+    
+        /* Espacement et structure */
+        section {
+            padding: 60px 0;
+        }
+    
+        /* Ajustement des icônes dans les cartes */
+        .card-body i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+    
+        /* Bordure des images dans les cartes de membres */
+        .team .card img {
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+    
+        /* Formulaire de contact */
+        .form-control {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+    
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+    
+        label {
+            color: white;
+        }
+    
+        /* Style pour le bouton WhatsApp en bas */
+        .whatsapp-btn {
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px;
+            font-size: 18px;
+            z-index: 1000;
+        }
+    </style>
+    
+    <!-- Section Nos Services -->
+<section class="services py-5" id="services">
+    <div class="container">
+        <h2 class="text-center mb-5">Nos Services</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="bi bi-lightbulb display-4 text-warning"></i>
+                        <h4 class="card-title">Conseil Académique</h4>
+                        <p class="card-text">Nous vous accompagnons dans vos choix académiques pour une réussite optimale.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="bi bi-people-fill display-4 text-warning"></i>
+                        <h4 class="card-title">Soutien aux étudiants</h4>
+                        <p class="card-text">Des sessions de soutien aux étudiants à travers des ateliers et des rencontres.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="bi bi-briefcase-fill display-4 text-warning"></i>
+                        <h4 class="card-title">Orientation professionnelle</h4>
+                        <p class="card-text">Nous vous guidons dans vos choix de carrière et vos premiers pas dans le monde professionnel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Nos Membres -->
+<section class="team py-5" id="membres">
+    <div class="container">
+        <h2 class="text-center mb-5">Nos Membres</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="./Asset/ELEGBEDE Jean luc.jpg" class="card-img-top" alt="Membre 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Jean Dupont</h5>
+                        <p class="card-text">Président du BUE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="./Asset/Lazare LOKOSSOU.jpg" class="card-img-top" alt="Membre 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Marie Durand</h5>
+                        <p class="card-text">Vice-présidente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="./Asset/boco lisette.jpg" class="card-img-top" alt="Membre 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Paul Martin</h5>
+                        <p class="card-text">Trésorier</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="./Asset/METONGNON Idayatou.jpg" class="card-img-top" alt="Membre 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Laura Brun</h5>
+                        <p class="card-text">Secrétaire Générale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Partenaires -->
+<section class="partners py-5" id="partenaires">
+    <div class="container">
+        <h2 class="text-center mb-5">Nos Partenaires</h2>
+        <div class="row text-center">
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner1.png" alt="Partenaire 1" class="img-fluid">
+            </div>
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner2.png" alt="Partenaire 2" class="img-fluid">
+            </div>
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner3.png" alt="Partenaire 3" class="img-fluid">
+            </div>
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner4.png" alt="Partenaire 4" class="img-fluid">
+            </div>
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner5.png" alt="Partenaire 5" class="img-fluid">
+            </div>
+            <div class="col-md-2 mb-4">
+                <img src="./Asset/partner6.png" alt="Partenaire 6" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section Dernières Actualités -->
+<section class="actualites py-5" id="actualites">
+    <div class="container">
+        <h2 class="text-center mb-5">Dernières Actualités</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./Asset/news1.jpg" class="card-img-top" alt="Actualité 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Nouvelle campagne d'inscription 2024</h5>
+                        <p class="card-text">Les inscriptions sont ouvertes pour la nouvelle année universitaire. Découvrez les dates clés !</p>
+                        <a href="#" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./Asset/news2.jpg" class="card-img-top" alt="Actualité 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Atelier de formation pour les nouveaux étudiants</h5>
+                        <p class="card-text">Un atelier dédié à l'intégration des nouveaux étudiants aura lieu en octobre. Ne le manquez pas !</p>
+                        <a href="#" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="./Asset/news3.jpg" class="card-img-top" alt="Actualité 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Conférence annuelle du BUE</h5>
+                        <p class="card-text">Rejoignez-nous pour la conférence annuelle sur le rôle des étudiants dans le développement académique.</p>
+                        <a href="#" class="btn btn-primary">Lire plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section Contact -->
+<section class="contact py-5" id="contact">
+    <div class="container">
+        <h2 class="text-center mb-5">Nous Contacter</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h5>Adresse</h5>
+                <p>123 Rue des Universités, Cotonou, Bénin</p>
+                <h5>Email</h5>
+                <p>contact@buefllac.org</p>
+                <h5>Téléphone</h5>
+                <p>+229 123 456 789</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Bouton WhatsApp fixe -->
+    <a href="https://wa.me/+22964200860" class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

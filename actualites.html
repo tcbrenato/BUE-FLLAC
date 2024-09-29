@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités & Événements - BUE/FLLAC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style pour fixer le header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #343a40; /* Couleur sombre pour le header */
+            z-index: 1000;
+            padding: 15px 0; /* Espace pour rendre le header plus grand */
+        }
+        header .navbar-brand img {
+            height: 60px; /* Taille du logo */
+        }
+        .navbar-nav {
+            flex-grow: 1;
+            justify-content: center; /* Centrer le menu */
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            font-size: 1.2rem; /* Taille du texte du menu */
+        }
+        .action-btn {
+            background-color: #ffc107;
+            color: black;
+            font-weight: bold;
+        }
+        /* Style pour fixer le bouton WhatsApp en bas de page */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px;
+            font-size: 18px;
+            z-index: 1000;
+        }
+        /* Espace au-dessus du contenu pour ne pas chevaucher le header */
+        .content {
+            padding-top: 120px; 
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Header -->
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo">
+            </a>
+            <!-- Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="equipes.html">Membres BUE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="actualites.html">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <!-- Bouton principal d'action "La FNEB" -->
+                <a href="#" class="btn btn-warning action-btn">La FNEB</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <!-- Contenu principal pour les actualités -->
+    <div class="content">
+        <div class="container">
+            <h1>Actualités & Événements</h1>
+            <p>Retrouvez ici toutes les actualités et les événements récents du BUE/FLLAC...</p>
+            <!-- Liste des actualités et événements -->
+            <ul class="list-group">
+                <li class="list-group-item">Événement 1 - Date</li>
+                <li class="list-group-item">Événement 2 - Date</li>
+                <li class="list-group-item">Actualité 1 - Date</li>
+                <li class="list-group-item">Actualité 2 - Date</li>
+                <!-- Plus d'éléments -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bouton WhatsApp fixe -->
+    <a href="https://wa.me/numéro?text=Bonjour" class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i> Click to Chat
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
