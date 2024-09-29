@@ -3,50 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Services - BUE/FLLAC</title>
+    <title>BUE/FLLAC - Nos Services</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* Style pour fixer le header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #343a40; /* Couleur sombre pour le header */
-            z-index: 1000;
-            padding: 15px 0; /* Espace pour rendre le header plus grand */
+        /* Style de base pour la page */
+        body {
+            background-color: #f8f9fa; /* Couleur de fond claire */
+            color: #212529; /* Couleur de texte standard */
         }
-        header .navbar-brand img {
-            height: 60px; /* Taille du logo */
-        }
-        .navbar-nav {
-            flex-grow: 1;
-            justify-content: center; /* Centrer le menu */
-        }
-        .navbar-nav .nav-link {
+
+        /* Couleur principale */
+        .hero {
+            background-color: rgb(18, 100, 77); /* Couleur de fond de la section héro */
             color: white;
-            font-size: 1.2rem; /* Taille du texte du menu */
+            padding: 60px 0;
         }
-        .action-btn {
-            background-color: #ffc107;
-            color: black;
-            font-weight: bold;
-        }
-        /* Style pour fixer le bouton WhatsApp en bas de page */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 15px;
-            font-size: 18px;
-            z-index: 1000;
-        }
+
         /* Espace au-dessus du contenu pour ne pas chevaucher le header */
         .content {
-            padding-top: 120px; 
+            padding-top: 120px;
+        }
+
+        /* Section des services */
+        .service-card {
+            background-color: rgb(22, 120, 90); /* Variation de vert légèrement plus clair */
+            border-radius: 8px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px); /* Animation au survol */
+        }
+
+        /* Titres */
+        h2 {
+            color: rgb(15, 11, 11);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Boutons */
+        .btn-primary {
+            background-color: #318F14; /* Vert plus vif pour les boutons */
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #28a745; /* Changement de couleur au survol */
         }
     </style>
 </head>
@@ -54,64 +60,151 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo" height="60">
                 </a>
-                <!-- Menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item"></li>
-                            <a class="nav-link" href="equipes.html">Membres BUE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="actualites.html">Actualités</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipes.html">Membres BUE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <!-- Bouton principal d'action "La FNEB" -->
                     <a href="#" class="btn btn-warning action-btn">La FNEB</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contenu principal pour les services -->
-    <div class="content">
-        <div class="container">
+    <!-- Section Héro -->
+    <section class="hero">
+        <div class="container text-center">
             <h1>Nos Services</h1>
-            <p>Voici les services offerts par le BUE/FLLAC pour les étudiants :</p>
-            <ul class="list-group">
-                <li class="list-group-item">Orientation académique</li>
-                <li class="list-group-item">Soutien aux étudiants</li>
-                <li class="list-group-item">Assistance dans les démarches administratives</li>
-                <li class="list-group-item">Informations pratiques sur la vie universitaire</li>
-                <!-- Ajouter d'autres services -->
-            </ul>
+            <p>Découvrez l'ensemble des services que nous proposons pour accompagner les étudiants dans leur parcours académique.</p>
         </div>
+    </section>
+
+    <!-- Espace de contenu -->
+    <div class="content">
+
+        <!-- Section des Services -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Les Services que Nous Offrons</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-lightbulb display-4"></i>
+                                <h4 class="card-title">Conseil Académique</h4>
+                                <p class="card-text">Accompagnement personnalisé pour aider les étudiants dans leurs choix académiques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-people-fill display-4"></i>
+                                <h4 class="card-title">Soutien aux Étudiants</h4>
+                                <p class="card-text">Sessions de soutien par le biais d'ateliers et de rencontres pour les étudiants.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-briefcase-fill display-4"></i>
+                                <h4 class="card-title">Orientation Professionnelle</h4>
+                                <p class="card-text">Conseils pour guider les étudiants dans leurs choix de carrière.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-chat-dots display-4"></i>
+                                <h4 class="card-title">Assistance Psychologique</h4>
+                                <p class="card-text">Soutien psychologique et écoute pour les étudiants en difficulté.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-calendar-event display-4"></i>
+                                <h4 class="card-title">Événements et Ateliers</h4>
+                                <p class="card-text">Organisation d'événements et d'ateliers pour enrichir l'expérience étudiante.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card service-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-file-earmark-text display-4"></i>
+                                <h4 class="card-title">Ressources Documentaires</h4>
+                                <p class="card-text">Accès à des ressources et documents utiles pour les études.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section d'appel à l'action -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2>Prêt à Bénéficier de Nos Services ?</h2>
+                <p>Contactez-nous dès aujourd'hui pour plus d'informations.</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">Contactez-Nous</a>
+            </div>
+        </section>
     </div>
 
-    <!-- Bouton WhatsApp fixe -->
-    <a href="https://wa.me/numéro?text=Bonjour" class="whatsapp-btn" target="_blank">
-        <i class="bi bi-whatsapp"></i> Click to Chat
-    </a>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-white py-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="text-uppercase">Contactez-nous</h5>
+                    <p>
+                        Bureau d'Union d'Entité de la FLLAC<br>
+                        Université d'Abomey-Calavi<br>
+                        Téléphone: +22964200860<br>
+                        Email: contact@buefllac.bj
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#membres" class="text-white">Nos Membres</a></li>
+                        <li><a href="#partenaires" class="text-white">Nos Partenaires</a></li>
+                        <li><a href="#actualites" class="text-white">Actualités</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Suivez-nous</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100079737787373" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
+            © 2024 Bureau d'Union d'Entité de la FLLAC | Tous droits réservés
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

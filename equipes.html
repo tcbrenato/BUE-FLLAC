@@ -3,50 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équipe - BUE/FLLAC</title>
+    <title>BUE/FLLAC - Équipes</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* Style pour fixer le header */
-        header {
-            position: fixed;
+        /* Style de base pour la page */
+        body {
+            background-color: #f8f9fa; /* Couleur de fond claire */
+            color: #212529; /* Couleur de texte standard */
+        }
+
+        /* Bannière de couverture */
+        .cover-banner {
+            position: relative;
+            height: 400px;
+            background-image: url('chemin/vers/votre/image.jpg'); /* Remplacez par l'URL de votre image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cover-banner::after {
+            content: '';
+            position: absolute;
             top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(18, 100, 77, 0.6); /* Couleur verte avec transparence */
+        }
+
+        .cover-banner h1 {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+            font-size: 3rem;
+        }
+
+        /* Style des membres de l'équipe */
+        .member-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px); /* Animation au survol */
+        }
+
+        .member-photo {
             width: 100%;
-            background-color: #343a40; /* Couleur sombre pour le header */
-            z-index: 1000;
-            padding: 15px 0; /* Espace pour rendre le header plus grand */
+            height: 200px; /* Hauteur fixe pour les photos */
+            object-fit: contain; /* Utiliser 'contain' pour afficher l'image entière */
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
-        header .navbar-brand img {
-            height: 60px; /* Taille du logo */
+
+        /* Titres */
+        h2 {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
         }
-        .navbar-nav {
-            flex-grow: 1;
-            justify-content: center; /* Centrer le menu */
+
+        /* Réseaux sociaux */
+        .social-icons a {
+            margin: 0 10px;
+            color: #318F14; /* Couleur du logo */
         }
-        .navbar-nav .nav-link {
-            color: white;
-            font-size: 1.2rem; /* Taille du texte du menu */
-        }
-        .action-btn {
-            background-color: #ffc107;
-            color: black;
-            font-weight: bold;
-        }
-        /* Style pour fixer le bouton WhatsApp en bas de page */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 15px;
-            font-size: 18px;
-            z-index: 1000;
-        }
-        /* Espace au-dessus du contenu pour ne pas chevaucher le header */
-        .content {
-            padding-top: 120px; 
+
+        .social-icons a:hover {
+            color: #28a745; /* Changement de couleur au survol */
         }
     </style>
 </head>
@@ -54,70 +83,227 @@
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
-                    <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo" height="60">
                 </a>
-                <!-- Menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item"></li>
-                            <a class="nav-link" href="equipes.html">Membres BUE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="actualites.html">Actualités</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="equipes.html">Membres BUE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="actualites.html">Actualités</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
-                    <!-- Bouton principal d'action "La FNEB" -->
                     <a href="#" class="btn btn-warning action-btn">La FNEB</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contenu principal pour l'équipe -->
-    <div class="content">
-        <div class="container">
-            <h1>Notre Équipe</h1>
-            <p>Découvrez les membres du BUE/FLLAC :</p>
-            <div class="row">
-                <!-- Membre 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="member1.jpg" class="card-img-top" alt="Membre 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Nom du membre 1</h5>
-                            <p class="card-text">Fonction : Président</p>
+    <section class="hero-section" style="position: relative; height: 400px; overflow: hidden;">
+        <div class="hero-background" style="background-image: url('./Asset/ensemble.jpg'); background-size: cover; background-position: center; height: 100%;">
+            <div class="hero-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(18, 100, 77, 0.6);"></div>
+            <h1 class="hero-text" style="position: relative; color: white; text-align: center; padding-top: 150px; font-size: 3rem;">
+                NOTRE ÉQUIPE
+            </h1>
+        </div>
+    </section>
+    
+
+    <!-- Espace de contenu -->
+    <div class="container py-5">
+        <h2>Rencontrez Nos Membres</h2>
+        <div class="row">
+            <!-- Membre 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/ELEGBEDE Jean luc.jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Jean-Luc ELEGBEDE</h5>
+                        <p>Président/BUE</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
                         </div>
                     </div>
                 </div>
-                <!-- Ajouter d'autres membres ici -->
+            </div>
+            <!-- Membre 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/Lazare LOKOSSOU.jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Lazare LOKOSSOU</h5>
+                        <p>Vice-Président</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/sossou donatien .jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Donatien SOSSOU</h5>
+                        <p>Sécretaire Général</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/TCHANKA Roméo.jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Roméo TCHANKA</h5>
+                        <p>Trésorier Général</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/Fulbert ZOUNDJI.jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Fulbert ZONDJI</h5>
+                        <p>Sécretaire à l'Organisation </p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Membre 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card member-card text-center">
+                    <img src="./Asset/BIDOUZO Josephe.jpg" alt="Nom Prénom" class="member-photo">
+                    <div class="card-body">
+                        <h5>Joseph BIDOUZO</h5>
+                        <p>Trésorier Général Adjoint</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Bouton WhatsApp fixe -->
-    <a href="https://wa.me/numéro?text=Bonjour" class="whatsapp-btn" target="_blank">
-        <i class="bi bi-whatsapp"></i> Click to Chat
-    </a>
+     <!-- Membre 5 -->
+     <div class="col-md-4 mb-4">
+        <div class="card member-card text-center">
+            <img src="./Asset/FLLAC_5.JPG" alt="Nom Prénom" class="member-photo">
+            <div class="card-body">
+                <h5>Abraham DOLAPE</h5>
+                <p>Sécretaire Généraol Adjoint </p>
+                <div class="social-icons">
+                    <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+     <!-- Membre 5 -->
+     <div class="col-md-4 mb-4">
+        <div class="card member-card text-center">
+            <img src="./Asset/boco lisette.jpg" alt="Nom Prénom" class="member-photo">
+            <div class="card-body">
+                <h5>Lisette BOCO</h5>
+                <p>P/CRF </p>
+                <div class="social-icons">
+                    <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Membre 5 -->
+     <div class="col-md-4 mb-4">
+        <div class="card member-card text-center">
+            <img src="./Asset/LOKOSSOU Epiphane.jpg" alt="Nom Prénom" class="member-photo">
+            <div class="card-body">
+                <h5>Epiphane LOKOSSOU</h5>
+                <p>SG/CRF </p>
+                <div class="social-icons">
+                    <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Membre 5 -->
+     <div class="col-md-4 mb-4">
+        <div class="card member-card text-center">
+            <img src="./Asset/METONGNON Idayatou.jpg" alt="Nom Prénom" class="member-photo">
+            <div class="card-body">
+                <h5>Idayatou METONGNON</h5>
+                <p>Sécretaire aux Affaires Financières</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/NUMERO_WHATSAPP" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/USERNAME" target="_blank"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-dark text-white py-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="text-uppercase">Contactez-nous</h5>
+                    <p>
+                        Bureau d'Union d'Entité de la FLLAC<br>
+                        Université d'Abomey-Calavi<br>
+                        Téléphone: +22964200860<br>
+                        Email: contact@buefllac.bj
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#membres" class="text-white">Nos Membres</a></li>
+                        <li><a href="#partenaires" class="text-white">Nos Partenaires</a></li>
+                        <li><a href="#actualites" class="text-white">Actualités</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Suivez-nous</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100079737787373" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
+            © 2024 Bureau d'Union d'Entité de la FLLAC | Tous droits réservés
+        </div>
+    </footer>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
