@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - BUE/FLLAC</title>
+    <title>BUE/FLLAC - À propos</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         /* Style pour fixer le header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: #343a40; /* Couleur sombre pour le header */
+            background-color: #ffffff;
             z-index: 1000;
-            padding: 15px 0; /* Espace pour rendre le header plus grand */
+            padding: 15px 0;
         }
+
         header .navbar-brand img {
-            height: 60px; /* Taille du logo */
+            height: 60px;
         }
+
         .navbar-nav {
             flex-grow: 1;
-            justify-content: center; /* Centrer le menu */
+            justify-content: center; 
         }
+
         .navbar-nav .nav-link {
+            color: #318F14;
+            font-size: 1.2rem; 
+        }
+
+        /* Couleur principale (comme dans la première section) */
+        .hero, .services, .team, .actualites, .partners, .contact, .about {
+            background-color: rgb(18, 100, 77); /* Vert foncé */
             color: white;
-            font-size: 1.2rem; /* Taille du texte du menu */
         }
-        .action-btn {
-            background-color: #ffc107;
-            color: black;
-            font-weight: bold;
+
+        /* Style pour les titres */
+        h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
-        /* Style pour fixer le bouton WhatsApp en bas de page */
+
+        section {
+            padding: 60px 0;
+        }
+
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
@@ -44,23 +60,17 @@
             font-size: 18px;
             z-index: 1000;
         }
-        /* Espace au-dessus du contenu pour ne pas chevaucher le header */
-        .content {
-            padding-top: 120px; 
-        }
     </style>
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="./Asset/logo_FLLAC_tcb-removebg-preview.png" alt="BUE/FLLAC Logo">
                 </a>
-                <!-- Menu -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -75,7 +85,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="services.html">Services</a>
                         </li>
-                        <li class="nav-item"></li>
+                        <li class="nav-item">
                             <a class="nav-link" href="equipes.html">Membres BUE</a>
                         </li>
                         <li class="nav-item">
@@ -85,28 +95,319 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
-                    <!-- Bouton principal d'action "La FNEB" -->
                     <a href="#" class="btn btn-warning action-btn">La FNEB</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contenu principal pour À propos -->
-    <div class="content">
-        <div class="container">
-            <h1>À propos de nous</h1>
-            <p>Le Bureau d'Union d'Entité de la FLLAC (BUE/FLLAC) est une institution spécialisée de la Fédération Nationale des Étudiants du Bénin (FNEB)...</p>
-            <p>[Ajouter plus de contenu détaillé ici sur la mission, l’histoire, les objectifs, etc.]</p>
+    <br><br><br>
+
+    <!-- Section Notre Mission -->
+<section class="about-hero" style="background-color: rgb(18, 100, 77); padding: 60px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-white">
+                <h1>Notre Mission</h1>
+                <p>
+                    Le Bureau d'Union d'Entité de la FLLAC a pour mission de soutenir les étudiants dans leur parcours académique
+                    en leur fournissant des ressources, des conseils et un accompagnement personnalisé. Nous croyons en la
+                    réussite de chaque étudiant et nous nous engageons à faciliter leur intégration et leur développement.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="./Asset/hero mission.jpg" alt="Mission" class="img-fluid animate-img">
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Bouton WhatsApp fixe -->
-    <a href="https://wa.me/numéro?text=Bonjour" class="whatsapp-btn" target="_blank">
-        <i class="bi bi-whatsapp"></i> Click to Chat
+<style>
+    /* Animation pour l'image */
+    @keyframes slideIn {
+        0% {
+            transform: translateX(30px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .animate-img {
+        animation: slideIn 0.6s ease forwards;
+    }
+</style>
+
+
+    <!-- Section Notre Histoire, Notre Engagement, Nos Objectifs -->
+<section class="about-grid" style="background-color: rgb(22, 120, 90); padding: 60px 0;">
+    <div class="container">
+        <h2 class="text-center text-white mb-5">Notre Histoire, Notre Engagement, Nos Objectifs</h2>
+        <div class="row text-center">
+            <!-- Notre Histoire -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-white">Notre Histoire</h4>
+                        <p class="card-text text-white">Depuis notre création, nous avons œuvré pour l'intégration des étudiants, en leur fournissant des ressources et un accompagnement adaptés.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Notre Engagement -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-white">Notre Engagement</h4>
+                        <p class="card-text text-white">Nous nous engageons à offrir un soutien de qualité et à favoriser l'épanouissement académique et personnel de chaque étudiant.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Nos Objectifs -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-white">Nos Objectifs</h4>
+                        <p class="card-text text-white">Notre objectif est de garantir que chaque étudiant ait accès aux outils nécessaires pour réussir et s'intégrer dans la vie universitaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Style des cartes */
+    .card {
+        background-color: rgba(0, 0, 0, 0.3); /* Fond des cartes légèrement transparent */
+        border: none; /* Pas de bordure */
+        border-radius: 10px; /* Coins arrondis */
+    }
+
+    .card-title {
+        font-size: 1.5rem; /* Taille des titres */
+        margin-bottom: 1rem; /* Marge inférieure */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Taille du texte */
+    }
+</style>
+
+
+    <!-- Section Devenir Partenaire -->
+<section class="partner-signup" style="background-color: rgb(22, 120, 90); padding: 60px 0;">
+    <div class="container">
+        <h2 class="text-center text-white mb-5">Devenir Partenaire</h2>
+        <p class="text-center text-white mb-4">Si vous êtes intéressé à rejoindre notre réseau de partenaires et à contribuer à l'épanouissement des étudiants, veuillez remplir le formulaire ci-dessous.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-white">Nom de l'Organisation</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact-name" class="form-label text-white">Nom du Contact</label>
+                        <input type="text" class="form-control" id="contact-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label text-white">Téléphone</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label text-white">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Style du formulaire */
+    .form-control {
+        background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+        border: 1px solid white; /* Bordure blanche */
+        color: white; /* Couleur du texte */
+    }
+
+    .form-control:focus {
+        background-color: rgba(255, 255, 255, 0.2); /* Légère variation au focus */
+        color: white; /* Couleur du texte au focus */
+    }
+
+    label {
+        color: white; /* Couleur des étiquettes */
+    }
+
+    /* Bouton d'envoi */
+    .btn-warning {
+        background-color: #ffc107; /* Couleur du bouton */
+        border: none; /* Pas de bordure */
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800; /* Couleur au survol */
+    }
+</style>
+
+<!-- Section Filières -->
+<section class="departments" style="background-color: #295887; padding: 60px 0;">
+    <div class="container">
+        <h2 class="text-center mb-5">Les 5 Départements de la FLLAC</h2>
+        <div class="row">
+            <!-- Département des Sciences du Langage et de la Communication -->
+            <div class="col-md-4">
+                <div class="department-card">
+                    <h3>Département des Sciences du Langage et de la Communication</h3>
+                    <p>Ce département explore les aspects théoriques et pratiques de la communication et du langage.</p>
+                    <p><strong>Débouchés :</strong> Journalisme, Communication d'entreprise, Relations publiques.</p>
+                </div>
+            </div>
+            <!-- Lettres Modernes -->
+            <div class="col-md-4">
+                <div class="department-card">
+                    <h3>Lettres Modernes</h3>
+                    <p>Ce programme met l'accent sur l'étude de la littérature moderne et des techniques d'écriture.</p>
+                    <p><strong>Débouchés :</strong> Édition, Enseignement, Critique littéraire.</p>
+                </div>
+            </div>
+            <!-- Anglais -->
+            <div class="col-md-4">
+                <div class="department-card">
+                    <h3>Anglais</h3>
+                    <p>Le département d'anglais offre une formation approfondie sur la langue anglaise et la culture anglophone.</p>
+                    <p><strong>Débouchés :</strong> Enseignement, Traduction, Interprétariat.</p>
+                </div>
+            </div>
+            <!-- Espagnol -->
+            <div class="col-md-4">
+                <div class="department-card">
+                    <h3>Espagnol</h3>
+                    <p>Ce programme se concentre sur l'apprentissage de l'espagnol et l'analyse de la culture hispanique.</p>
+                    <p><strong>Débouchés :</strong> Traduction, Tourisme, Enseignement.</p>
+                </div>
+            </div>
+            <!-- Allemand -->
+            <div class="col-md-4">
+                <div class="department-card">
+                    <h3>Allemand</h3>
+                    <p>Ce département propose une immersion dans la langue allemande et sa culture riche et variée.</p>
+                    <p><strong>Débouchés :</strong> Enseignement, Traduction, Relations internationales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Style des cartes de département */
+    .department-card {
+        background-color: white; /* Fond blanc */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .department-card:hover {
+        transform: translateY(-10px); /* Animation sur survol */
+    }
+
+    h3 {
+        color: #007bff; /* Couleur des titres */
+    }
+</style>
+
+
+
+    <!-- Section Contact -->
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Nous Contacter</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5>Adresse</h5>
+                    <p> Université d'Abomey-Calavi, Bâtiment Bloc Pédagogique, Bénin</p>
+                    <h5>Email</h5>
+                    <p>contact@buefllac.org</p>
+                    <h5>Téléphone</h5>
+                    <p>+22964200860</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-lg-start bg-dark text-white py-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="text-uppercase">Contactez-nous</h5>
+                    <p>
+                        Bureau d'Union d'Entité de la FLLAC<br>
+                        Université d'Abomey-Calavi<br>
+                        Téléphone: +22964200860<br>
+                        Email: contact@buefllac.bj
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Liens Utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#membres" class="text-white">Nos Membres</a></li>
+                        <li><a href="#partenaires" class="text-white">Nos Partenaires</a></li>
+                        <li><a href="#actualites" class="text-white">Actualités</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Suivez-nous</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100079737787373" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1);">
+            © 2024 Bureau d'Union d'Entité de la FLLAC | Tous droits réservés
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+
+    <!-- Bouton WhatsApp -->
+    <a href="https://wa.me/+22964200860" class="whatsapp-btn" target="_blank">
+        <i class="bi bi-whatsapp"></i>
     </a>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
